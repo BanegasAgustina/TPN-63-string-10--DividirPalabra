@@ -12,12 +12,23 @@ cout<<DividirPalabra(frase , l);
 string DividirPalabra(string f,string l){
 	int i;	
    l=" ";
+   string n;
+   string aux;
+   
+
 	for(i=0; i< f.size();i++)
 	{
 		if(f[i] == l[0]  )
 		{
-		 f[i]='"';
+			n+="'"+aux+"'";
+			aux=" ";
+			
 		}
+		else{
+			aux+=f[i];
 	}
-return f;	
+	}
+	n+="'"+aux+"'";
+	aux=" ";
+return n;	
 }
